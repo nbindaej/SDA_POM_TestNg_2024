@@ -24,7 +24,7 @@ public class C08_XYZBank {
 // And Accept alert
 // Add 4 more customers
         ManagerPage managerPage =new ManagerPage();
-        //managerPage.addCustomerInfo();
+        managerPage.addCustomerInfo();
 
 // Click on "Open Account"  button , Click on "Customer" dropdown , Select customer name
 // Click on "Currency" dropdown Select "Dollar"
@@ -35,7 +35,7 @@ public class C08_XYZBank {
 // Click on "Customers" button And Count table row numbers
 // Then Assert that you created 5 customers
         managerPage.customersTable();
-        Assert.assertEquals(managerPage.customersTable(),5);
+        Assert.assertEquals(managerPage.customersTable(),10);
 // Click on "Home" button
         homePage.backToHome();
 
@@ -73,7 +73,7 @@ public class C08_XYZBank {
 // Click on each "Delete" button
         managerPage.deleteCustomers();
 // And Count table row numbers , Assert that number of customers is 0
-        Assert.assertEquals(managerPage.customersTable(),2);
+        Assert.assertEquals(managerPage.customersTable(),0);
 
         Driver.closeDriver();
 }

@@ -42,9 +42,10 @@ public class Driver {
                     driver = new SafariDriver();
                     break;
             }
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            driver.manage().window().maximize();
         }
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().window().maximize();
+
         return driver;
     }//getDriver ends here
 

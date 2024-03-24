@@ -48,11 +48,10 @@ public class CustomerPage {
     public void withdraw() throws InterruptedException {
         withdrawlButton.click();
         Thread.sleep(1000);
-        amountBox.sendKeys("80");
+        amountBox.sendKeys("100");
         submitButton.click();
     }
     public void logout(){
         logoutButton.click();
     }
-
 }
